@@ -1,4 +1,4 @@
-# Proctor: Basic Survey Application 
+# Proctor: Basic Survey Application
 
 This is a coding challenge created by DX. It houses a basic survey application that will serve as the basis for the challenge.
 
@@ -61,22 +61,22 @@ The purpose of this exercise is to evaluate how you would implement a moderately
    ```bash
    # Install nvm (Node Version Manager) for better Node.js version management
    brew install nvm
-   
+
    # Create NVM's working directory if it doesn't exist
    mkdir -p ~/.nvm
-   
+
    # Add NVM to your shell profile
    echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zshrc
    echo '[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"' >> ~/.zshrc
    echo '[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"' >> ~/.zshrc
-   
+
    # Source the updated profile
    source ~/.zshrc
-   
+
    # Install and use Node.js version 20 (compatible with the project dependencies)
    nvm install 20
    nvm use 20
-   
+
    # Verify installation
    node -v
    ```
@@ -126,6 +126,6 @@ These components are located in the `app/javascript/components` directory.
 
 ## Submission
 
-Please submit your solution as a .zip file or Github repo with clear instructions on how to run your code. Include any notes or explanations in the README or as comments in your code.
+Please fork this github repo, and include your solution as a PR to the forked repo with clear instructions on how to run your code. Include any notes or explanations in the README or as comments in your code.
 
 Good luck!
