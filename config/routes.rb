@@ -1,20 +1,20 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Set the root path to the surveys index
   root "surveys#index"
-  
-  # RESTful routes for surveys
+
   resources :surveys do
-    # Nested routes for questions
-    resources :questions, except: [:index, :show]
-    
-    # Route for taking a survey
     member do
-      get 'take'
-      post 'submit'
+      get  :branching
+      post :update_branching
+      get  :take
+      post :submit
+      get  :analytics   # <-- adding analytics
     end
-    # Route for creating responses
+
+    resources :questions, except: [:index, :show]
     resources :responses, only: [:create]
+  end
+
+  resources :responses, only: [] do
+    collection { post :start }
   end
 end
